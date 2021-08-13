@@ -1,0 +1,22 @@
+Projeto Final - Sistema de controle de elevadores
+
+Requisitos funcionais:
+
+- O prédio deve ter 15 andares
+- Os usuários do prédio deverão ser servidos por meio de 3 elevadores
+- Será simulado um prédio comercial, em andares altos, o elevador irá descer
+- Dará preferência para buscar primeiro os usuários de anres altos e em seguida os mais baixos
+- Devido ao item anterior, há grande probabilidade de o elevador em andares baixos sempre estar cheio, fazer com que um elevador tenha prioridade em subir aos andares mais altos e o restante, subirem até andares mais baixos 
+- O elevador ficará de porta aberta quando estiver parado em um andar
+- O elevador só se movimentará se estiver de porta fechada
+- O botão externo aos elevadores irá chamar qualquer um dos elevadores, eles terão lógica própria ao serem buscados como definidos nos itens anteriores
+- Se o botão de dentor do elevador for pressionado, o elevador guardará na fila próprio os andares que irá atender
+- A ordem de atendimento para deixar as pessoas é de baixo para cima
+- Após o elevador entregar todas as pessoas em seus respectivos andares e não houver mais chamada, o elevador se deslocará e ficará parado no térreo
+
+
+Requisitos não funcionais:
+
+- Utilizar EK-TM4C1294XL
+- Programar um programa concorrente
+- Comunicação via UART por meio de interrupção
