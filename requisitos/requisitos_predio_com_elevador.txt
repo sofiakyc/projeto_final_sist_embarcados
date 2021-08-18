@@ -2,21 +2,23 @@ Projeto Final - Sistema de controle de elevadores
 
 Requisitos funcionais:
 
-- O prédio deve ter 15 andares
-- Os usuários do prédio deverão ser servidos por meio de 3 elevadores
-- Será simulado um prédio comercial, em andares altos, o elevador irá descer
-- Dará preferência para buscar primeiro os usuários de anres altos e em seguida os mais baixos
-- Devido ao item anterior, há grande probabilidade de o elevador em andares baixos sempre estar cheio, fazer com que um elevador tenha prioridade em subir aos andares mais altos e o restante, subirem até andares mais baixos 
-- O elevador ficará de porta aberta quando estiver parado em um andar
-- O elevador só se movimentará se estiver de porta fechada
-- O botão externo aos elevadores irá chamar qualquer um dos elevadores, eles terão lógica própria ao serem buscados como definidos nos itens anteriores
-- Se o botão de dentor do elevador for pressionado, o elevador guardará na fila próprio os andares que irá atender
-- A ordem de atendimento para deixar as pessoas é de baixo para cima
-- Após o elevador entregar todas as pessoas em seus respectivos andares e não houver mais chamada, o elevador se deslocará e ficará parado no térreo
 
+1. Poderá subir ou descer quando a porta estiver fechada
+2. Não poderá abrir a porta se estiver entre andares
+3. Não poderá abrir a porta se estiver em movimento
+4. Cada elevador será independente
+5. Os usuários de dentro do elevador poderão escolher o andar que querem descer
+6. Os usuários de fora do elevador poderão chamar o elevador
+7. A luz do andar para o qual o elevador está se deslocando para ficará acesa até a porta do elevador abrir
+8. As portas ficarão com as portas abertas por 2 segundos
+9. Se não houver mais chamada para e pelo elevador, ele ficará de portas abertas no andar
 
 Requisitos não funcionais:
 
-- Utilizar EK-TM4C1294XL
-- Programar um programa concorrente
-- Comunicação via UART por meio de interrupção
+1. Utilizar EK-TM4C1294XL
+2. Fazer programa concorrente
+3. Proteger o mutex das outras tarefas
+3. Programar em linguagem C
+4. Comunicação via UART
+5. Deve conter 3 tarefas
+6. Deve ter uma fila para cada elevador
