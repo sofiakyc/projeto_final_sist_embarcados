@@ -1,0 +1,24 @@
+Projeto Final - Sistema de controle de elevadores
+
+Requisitos funcionais:
+
+
+1. Poderá subir ou descer quando a porta estiver fechada
+2. Não poderá abrir a porta se estiver entre andares
+3. Não poderá abrir a porta se estiver em movimento
+4. Cada elevador será independente
+5. Os usuários de dentro do elevador poderão escolher o andar que querem descer
+6. Os usuários de fora do elevador poderão chamar o elevador
+7. A luz do andar para o qual o elevador está se deslocando para ficará acesa até a porta do elevador abrir
+8. As portas ficarão com as portas abertas por 2 segundos
+9. Se não houver mais chamada para e pelo elevador, ele ficará de portas abertas no andar
+
+Requisitos não funcionais:
+
+1. Utilizar EK-TM4C1294XL
+2. Fazer programa concorrente
+3. Proteger o mutex das outras tarefas
+3. Programar em linguagem C
+4. Comunicação via UART
+5. Deve conter 3 tarefas
+6. Deve ter uma fila para cada elevador
